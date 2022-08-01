@@ -71,7 +71,7 @@ export default function Cadastro() {
   return(
     <>
     <div className="textoLogin">
-      <h1>Bem vindo a pagina de Cadastro</h1>
+      <h1>Faça seu cadastro</h1>
     </div>
     <div className="login">
       <form>
@@ -106,11 +106,10 @@ export default function Cadastro() {
         <div className="inputlogin">
           <button type="submit" onClick={handleSubmit}>Salvar</button>
         </div>
+       
       </form>
     </div>
-    <br />
-    <br />
-    <Link to="/usuario">Usuario</Link>
+
   </>
   )
   }

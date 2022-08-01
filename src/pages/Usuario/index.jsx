@@ -62,8 +62,9 @@ export default function Usuario() {
   return (
     <>
       <div className="textoLogin">
-        <h1>Bem vindo a pagina de Usuario</h1>
+        <h1>Informações do Usuario</h1>
       </div>
+      <div className="container">
       <table>
         <thead>
           <tr>
@@ -116,6 +117,7 @@ export default function Usuario() {
           })}
         </tbody>
       </table>
+      </div>
     </>
   );
 }

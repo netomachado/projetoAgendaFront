@@ -11,7 +11,6 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
     hasUser(email, password);
 
     setEmail("");
@@ -19,7 +18,7 @@ export default function Login() {
   }
 
   const hasUser = async (email, password) => {
-    const response = await api.get(`/login?email=${email}&password=${password}`);
+    const response = await api.post('/login',{"email": email, "password": password});
     if (response.data.length > 0) {
       setUser(response.data[0].user.IdUsuario);
       let IdUsuario = response.data[0].user.IdUsuario;
@@ -32,7 +31,6 @@ export default function Login() {
   return (
     <>
       <div className="textoLogin">
-        <h1>Bem vindo a pagina de Login</h1>
         <h3>Insira seu usuario e senha</h3>
       </div>
       <div className="login">
@@ -50,9 +48,7 @@ export default function Login() {
           </div>
         </form>
       </div>
-      <br />
-      <br />
-      <Link to="/usuario">Usuario</Link>
+
     </>
   );
 }

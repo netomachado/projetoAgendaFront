@@ -56,7 +56,7 @@ export default function Enderecos() {
   return(
     <>
     <div className="textoLogin">
-      <h1>Bem vindo a pagina de Enderecos do Usuario ${nome}</h1>
+      <h1>Cadastre seus endereços</h1>
     </div>
     <div className="login">
       <form>
@@ -86,6 +86,11 @@ export default function Enderecos() {
         </div>
         <div className="inputlogin">
           <button type="submit" onClick={handleSubmit}>Cadastrar</button>
+        </div>
+        <div className="inputlogin">
+        <button type="submit">
+            <Link to="/usuario">Concluido</Link>
+          </button>
         </div>
       </form>
     </div>
